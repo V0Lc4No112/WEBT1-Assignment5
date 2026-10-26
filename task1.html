@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airlock code breaker | Space Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/task1.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Space Notes</a>
+    <nav class="site-nav" aria-label="Tasks">
+      <a href="task1.html" aria-current="page">Code breaker</a>
+      <a href="task2.html">Mission board</a>
+      <a href="task3.html">Planetarium tickets</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Airlock code breaker</h1>
+    <p class="lead" id="rules"></p>
+
+    <section class="card game" id="game" aria-label="Game">
+      <form id="guess-form">
+        <label for="guess">Your guess</label>
+        <div class="guess-row">
+          <input type="text" id="guess" name="guess" inputmode="numeric" autocomplete="off">
+          <button type="submit" class="btn btn-primary" id="check">Check</button>
+        </div>
+      </form>
+      <p class="message" id="message" role="status"></p>
+      <p class="status-line" id="status"></p>
+      <h2>Your guesses</h2>
+      <ol class="history" id="history"></ol>
+      <button type="button" class="btn" id="restart">New game</button>
+    </section>
+  </main>
+</body>
+</html>

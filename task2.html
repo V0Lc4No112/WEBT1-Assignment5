@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mission prep board | Space Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/task2.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Space Notes</a>
+    <nav class="site-nav" aria-label="Tasks">
+      <a href="task1.html">Code breaker</a>
+      <a href="task2.html" aria-current="page">Mission board</a>
+      <a href="task3.html">Planetarium tickets</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mission prep board</h1>
+    <p class="lead">Move the launch tasks from "To do" to "Done".</p>
+
+    <div class="card toolbar">
+      <div>
+        <label for="search">Search by title</label>
+        <input type="search" id="search" autocomplete="off">
+      </div>
+      <div>
+        <label for="tag">Tag</label>
+        <select id="tag">
+          <option value="all">All tags</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="none">Default order</option>
+          <option value="high">Priority: high first</option>
+          <option value="low">Priority: low first</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="progress-box">
+      <label for="progress">Progress</label>
+      <progress id="progress"></progress>
+      <p class="progress-text" id="progress-text"></p>
+    </div>
+
+    <p class="message" id="notice" role="status"></p>
+    <p class="message" id="search-message"></p>
+    <div class="board" id="board"></div>
+  </main>
+</body>
+</html>

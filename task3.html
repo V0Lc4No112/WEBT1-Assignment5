@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Planetarium tickets | Space Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/task3.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Space Notes</a>
+    <nav class="site-nav" aria-label="Tasks">
+      <a href="task1.html">Code breaker</a>
+      <a href="task2.html">Mission board</a>
+      <a href="task3.html" aria-current="page">Planetarium tickets</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Planetarium tickets</h1>
+    <p class="lead">Book seats for a show at the Space Notes planetarium. The ticket preview changes while you type.</p>
+
+    <div class="layout">
+      <form class="card" id="ticket-form">
+        <p class="message" id="form-summary" role="alert"></p>
+
+        <div class="field" data-field="show">
+          <label for="show">Show</label>
+          <select id="show" name="show" aria-describedby="show-error" required>
+            <option value="">Choose a show</option>
+          </select>
+          <p class="field-error" id="show-error"></p>
+        </div>
+
+        <div class="field" data-field="date">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" min="2026-11-01" max="2026-12-31" aria-describedby="date-error" required>
+          <p class="field-error" id="date-error"></p>
+        </div>
+
+        <fieldset class="field" data-field="ticketType">
+          <legend>Ticket type</legend>
+          <div class="choices" id="type-choices"></div>
+          <p class="field-error" id="ticketType-error"></p>
+        </fieldset>
+
+        <div class="field" data-field="quantity">
+          <label for="quantity">Number of tickets</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" aria-describedby="quantity-hint quantity-error" required>
+          <p class="hint" id="quantity-hint"></p>
+          <p class="field-error" id="quantity-error"></p>
+        </div>
+
+        <div class="field" data-field="name">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" minlength="2" maxlength="40" autocomplete="name" aria-describedby="name-error" required>
+          <p class="field-error" id="name-error"></p>
+        </div>
+
+        <div class="field" data-field="email">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint email-error" required>
+          <p class="hint" id="email-hint"></p>
+          <p class="field-error" id="email-error"></p>
+        </div>
+
+        <div class="field" data-field="promo">
+          <label for="promo">Promo code (optional)</label>
+          <input type="text" id="promo" name="promo" maxlength="12" autocomplete="off" aria-describedby="promo-error">
+          <p class="field-error" id="promo-error"></p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Book tickets</button>
+          <button type="button" class="btn" id="clear">Clear</button>
+        </div>
+      </form>
+
+      <aside aria-labelledby="preview-title">
+        <h2 id="preview-title">Your ticket</h2>
+        <div class="ticket" id="preview"></div>
+        <div id="result"></div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
